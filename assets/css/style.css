@@ -1,0 +1,259 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    background-color: #f8f6f2;
+    color: #222;
+}
+
+/* NAVBAR */
+
+.navbar{
+    position: fixed;
+    width: 100%;
+    padding: 20px 60px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    z-index: 1000;
+
+    background-color: rgba(0,0,0,0.4);
+    backdrop-filter: blur(10px);
+}
+
+.logo{
+    color: #d4af37;
+    font-size: 2rem;
+}
+
+.nav-links{
+    display: flex;
+    gap: 30px;
+    list-style: none;
+}
+
+.nav-links a{
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.nav-links a:hover{
+    color: #d4af37;
+}
+
+/* HERO */
+
+.hero{
+    height: 100vh;
+
+    background-image: url('https://retiro.com.br/wp-content/uploads/2020/11/vento1.png');
+
+    background-size: cover;
+    background-position: center;
+
+    background-attachment: fixed;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+}
+
+.overlay{
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0,0,0,0.5);
+}
+
+.hero-content{
+    position: relative;
+    z-index: 2;
+
+    text-align: center;
+    color: white;
+
+    max-width: 700px;
+}
+
+.hero-content h2{
+    color: #d4af37;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+
+.hero-content h1{
+    font-size: 4rem;
+    margin-bottom: 20px;
+}
+
+.hero-content p{
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.hero-content button{
+    padding: 15px 40px;
+    border: none;
+
+    background-color: #d4af37;
+    color: black;
+
+    border-radius: 40px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.hero-content button:hover{
+    transform: scale(1.05);
+}
+
+/* SECTIONS */
+
+section{
+    padding: 100px 10%;
+}
+
+.section-title{
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-title h2{
+    font-size: 2.5rem;
+    color: #b68c1f;
+}
+
+/* ABOUT */
+
+.about-text{
+    max-width: 800px;
+    margin: auto;
+
+    text-align: center;
+    line-height: 1.8;
+}
+
+/* CARDS */
+
+.cards{
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.card{
+    background-color: white;
+
+    width: 300px;
+
+    padding: 30px;
+
+    border-radius: 20px;
+
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+
+    transition: 0.3s;
+}
+
+.card:hover{
+    transform: translateY(-10px);
+}
+
+.card h3{
+    color: #b68c1f;
+    margin-bottom: 15px;
+}
+
+/* SCHEDULE */
+
+.schedule-container{
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.day{
+    background-color: white;
+
+    width: 300px;
+
+    padding: 30px;
+
+    border-radius: 20px;
+
+    text-align: center;
+
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+
+    transition: 0.5s;
+}
+
+.day:hover{
+    transform: translateY(-10px)
+}
+
+.day h3{
+    color: #b68c1f;
+    margin-bottom: 15px;
+}
+
+/* FOOTER */
+
+footer{
+    background-color: #111;
+    color: white;
+
+    text-align: center;
+
+    padding: 40px;
+}
+/* LOCATION */
+
+.location{
+    background-color: #f3eee2;
+}
+
+.map-container{
+    max-width: 1000px;
+    margin: auto;
+
+    border-radius: 30px;
+
+    overflow: hidden;
+
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+
+    border: 4px solid #d4af37;
+}
+
+.map-container iframe{
+    width: 100%;
+    height: 450px;
+
+    display: block;
+}
+
+.navbar.scrolled{
+    background-color: rgba(122, 91, 15, 0.85);
+    padding: 15px 60px;
+
+    transition: 2s;
+}
