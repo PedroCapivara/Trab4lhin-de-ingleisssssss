@@ -11,7 +11,6 @@ html{
 body{
     font-family: 'Poppins', sans-serif;
     background-color: #f8f6f2;
-    color: #222;
 }
 
 /* NAVBAR */
@@ -158,6 +157,14 @@ section{
     flex-wrap: wrap;
 }
 
+i{
+    font-size: 3em;
+	color: #ffe666;
+	top: 30px;
+	left: 20px;
+	z-index: 1;
+}
+
 .card{
     background-color: white;
 
@@ -256,4 +263,8 @@ footer{
     padding: 15px 60px;
 
     transition: 2s;
+}
+/* GALLERY */
+.gallery{
+    background-color: #f3eee2;
 }
