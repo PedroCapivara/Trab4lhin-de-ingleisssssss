@@ -6,6 +6,7 @@
 
 html{
     scroll-behavior: smooth;
+    scroll-padding-top: 100px;
 }
 
 body{
@@ -42,15 +43,47 @@ body{
 }
 
 .nav-links a{
+    position: relative;
+
     color: white;
+
     text-decoration: none;
-    transition: 0.3s;
+
+    font-size: 1rem;
+    font-weight: 500;
+
+    letter-spacing: 1px;
+
+    transition: 0.3s ease;
+}
+
+/* Linha dourada animada */
+
+.nav-links a::after{
+    content: '';
+
+    position: absolute;
+
+    left: 0;
+    bottom: -6px;
+
+    width: 0%;
+    height: 2px;
+
+    background-color: #d4af37;
+
+    border-radius: 10px;
+
+    transition: width 0.3s ease;
 }
 
 .nav-links a:hover{
     color: #d4af37;
 }
 
+.nav-links a:hover::after{
+    width: 100%;
+}
 /* HERO */
 
 .hero{
@@ -267,4 +300,127 @@ footer{
 /* GALLERY */
 .gallery{
     background-color: #f3eee2;
+}
+/* GALLERY */
+
+.gallery-grid{
+    display: grid;
+
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+
+    gap: 20px;
+}
+
+.gallery-grid img{
+    width: 100%;
+    height: 250px;
+
+    object-fit: cover;
+
+    border-radius: 20px;
+
+    transition: 0.4s;
+
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.gallery-grid img:hover{
+    transform: scale(1.03);
+
+    filter: brightness(1.1);
+}
+/* FAQ */
+
+.faq{
+    background-color: #f8f6f2;
+}
+
+.faq-container{
+    max-width: 900px;
+    margin: auto;
+}
+
+.faq-item{
+    background-color: white;
+
+    margin-bottom: 20px;
+
+    border-radius: 20px;
+
+    overflow: hidden;
+
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.faq-question{
+    width: 100%;
+
+    padding: 25px;
+
+    border: none;
+
+    background: none;
+
+    text-align: left;
+
+    font-size: 1.1rem;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    color: #b68c1f;
+}
+
+.faq-answer{
+    max-height: 0;
+
+    overflow: hidden;
+
+    transition: max-height 0.4s ease;
+
+    padding: 0 25px;
+}
+
+.faq-answer p{
+    padding-bottom: 25px;
+
+    color: #444;
+
+    line-height: 1.7;
+}
+/* ITEMS */
+
+.items{
+    background-color: #f3eee2;
+}
+
+.items-container{
+    display: flex;
+
+    flex-wrap: wrap;
+
+    justify-content: center;
+
+    gap: 20px;
+}
+
+.item-card{
+    background-color: white;
+
+    padding: 20px 30px;
+
+    border-radius: 15px;
+
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+
+    transition: 0.3s;
+}
+
+.item-card:hover{
+    transform: translateY(-5px);
+
+    background-color: #d4af37;
+
+    color: white;
 }
